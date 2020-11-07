@@ -1,0 +1,39 @@
+{
+  "name": "microverse-js-capstone-game",
+  "version": "1.0.0",
+  "description": "My javascript capstone project (an rpg game)",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --color --progress",
+    "start": "webpack serve",
+    "lint": "eslint .",
+    "lint:css": "stylelint **/*.{css,scss}"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WinterCore/microverse-js-capstone-game.git"
+  },
+  "author": "WinterCore",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/WinterCore/microverse-js-capstone-game/issues"
+  },
+  "homepage": "https://github.com/WinterCore/microverse-js-capstone-game#readme",
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "copy-webpack-plugin": "^6.3.0",
+    "eslint": "^7.13.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "html-webpack-plugin": "^4.5.0",
+    "stylelint": "^13.7.2",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-scss": "^3.18.0",
+    "ts-loader": "^8.0.9",
+    "typescript": "^4.0.5",
+    "webpack": "^5.4.0",
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
