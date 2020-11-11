@@ -15,7 +15,15 @@
         "lib": [
             "es2016",
             "dom"
+        ],
+        "baseUrl": ".",
+        "typeRoots": [
+            "./node_modules/phaser/types"
         ]
     },
-    "include": ["src/**/*"]
+    "include": [
+        "src/**/*",
+        "node_modules/phaser/types/**/*"
+    ],
+    
 }
