@@ -50,20 +50,36 @@ class Preload extends Phaser.Scene {
             progressBar.destroy();
             progressBox.destroy();
             loadingText.destroy();
+            this.createAnims();
+            this.scene.start('Title');
         });
 
         this.loadAssets();
     }
 
     loadAssets() {
-        this.load.image('character0', 'assets/character/1.png');
-        this.load.image('character1', 'assets/character/2.png');
-        this.load.image('character2', 'assets/character/3.png');
-        this.load.image('character3', 'assets/character/4.png');
-        this.load.image('character4', 'assets/character/5.png');
-        this.load.image('character5', 'assets/character/6.png');
-        this.load.image('character6', 'assets/character/7.png');
-        this.load.image('character7', 'assets/character/8.png');
+        this.load.spritesheet('character', 'assets/character.png', {
+            frameWidth: 118,
+            frameHeight: 150,
+        });
+
+        this.load.spritesheet
+    }
+
+    createAnims() {
+        this.anims.create({
+            key: 'PLAYER_RUN',
+            frames: this.anims.generateFrameNumbers('character', {
+                start: 0,
+                end: 4,
+            }),
+            frameRate: 10,
+            repeat: -1,
+        });
+    }
+
+    create() {
+        this.scene.start('Title');
     }
 }
 

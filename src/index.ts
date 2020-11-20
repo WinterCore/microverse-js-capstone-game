@@ -3,6 +3,7 @@ import * as Phaser from 'phaser';
 import {
     Preload,
     Boot,
+    Title,
     Leaderboard,
     Options,
     Game
@@ -12,8 +13,9 @@ const config = {
     width: window.innerWidth,
     height: window.innerHeight,
     scene: [
-        Preload,
         Boot,
+        Preload,
+        Title,
         Leaderboard,
         Options,
         Game,
