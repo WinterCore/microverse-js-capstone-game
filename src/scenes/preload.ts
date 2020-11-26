@@ -63,7 +63,7 @@ class Preload extends Phaser.Scene {
             frameHeight: 150,
         });
 
-        this.load.spritesheet
+        this.load.atlas('platforms', 'assets/platforms.png', 'assets/platforms.json');
     }
 
     createAnims() {
