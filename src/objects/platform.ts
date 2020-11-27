@@ -36,7 +36,7 @@ class Platform extends Phaser.GameObjects.Container {
         const body = this.body as Phaser.Physics.Arcade.Body;
         body.setImmovable(true);
         body.setOffset(width / 2, height / 2);
-        body.setVelocityX(-20);
+        body.setVelocityX(-100);
         scene.add.existing(this);
     }
 
