@@ -6,7 +6,8 @@ import {
     Title,
     Leaderboard,
     Options,
-    Game
+    Game,
+    Gameover,
 } from './scenes/index';
 
 const config = {
@@ -19,6 +20,7 @@ const config = {
         Leaderboard,
         Options,
         Game,
+        Gameover,
     ],
     physics: {
         default: 'arcade',
