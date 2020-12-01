@@ -3,9 +3,10 @@ import * as Phaser from 'phaser';
 import Player from '../objects/player';
 import Platform from '../objects/platform';
 
-type texture = 'grass';
+type Texture = 'grass' | 'snow' | 'sand';
 
 class Game extends Phaser.Scene {
+    private currentTexture: Texture = 'snow';
     private player?: Player;
     private platformGroup?: Phaser.GameObjects.Group;
 
@@ -19,9 +20,12 @@ class Game extends Phaser.Scene {
 
         this.platformGroup = this.add.group();
 
-        this.addPlatform(gameWidth / 2, +this.game.config.height / 2, 5, 'grass');
+        this.addPlatform(gameWidth / 2, +this.game.config.height / 2, 5, this.currentTexture);
 
         this.physics.add.collider(this.platformGroup, this.player);
+
+        this.cameras.main.roundPixels = true;
+
         // this.add.existing(container1);
         // this.physics.add.sprite(10, 100, 'character0');
         // console.log(this.player);
@@ -34,7 +38,7 @@ class Game extends Phaser.Scene {
         const player = this.player!;
         const platformGroup = this.platformGroup!;
 
-        let rightmostPlatformX = -Infinity, rightmostPlatformWidth = 0;
+        let rightmostPlatform = platformGroup.getChildren()[0];
 
         platformGroup.getChildren().forEach((platform) => {
             // @ts-ignore
@@ -44,25 +48,38 @@ class Game extends Phaser.Scene {
             }
 
             // @ts-ignore
-            rightmostPlatformX = Math.max(rightmostPlatformX, platform.x)
-            // @ts-ignore
-            rightmostPlatformWidth = Math.max(rightmostPlatformWidth, platform.width)
+            if (platform.x > rightmostPlatform.x) {
+                rightmostPlatform = platform;
+            }
         });
 
-        // console.log(+this.game.config.width - rightmostPlatformX);
-        if (gameWidth - (rightmostPlatformX + rightmostPlatformWidth) > 100) {
-            const y = Phaser.Math.Between(gameHeight / 2, gameHeight - 30);
+
+        // @ts-ignore
+        if (gameWidth - (rightmostPlatform.x + rightmostPlatform.width) > 0) {
+            // @ts-ignore
+            const y = Phaser.Math.Between(gameHeight / 4, gameHeight - 30);
+            // @ts-ignore
+            const random = Phaser.Math.Between(0, y - rightmostPlatform.y);
             const width = Phaser.Math.Between(0, 7);
-            this.addPlatform(gameWidth, y, width, 'grass');
+            if (random > 0) {
+                const x = gameWidth + 200 + random;
+                this.addPlatform(x, y, width, this.currentTexture);
+            } else {
+                const x = gameWidth + 200;
+                this.addPlatform(x, y + random * -1, width, this.currentTexture);
+            }
         }
 
-        if (player.y + player.displayHeight >= gameHeight || player.x < 0) {
+        if (
+            player.y + player.displayHeight >= gameHeight
+            || (player.x < 0 && player.body.touching.right)
+        ) {
             this.scene.start('Gameover');
         }
     }
 
 
-    addPlatform(x: number, y: number, width: number, texture: texture) {
+    addPlatform(x: number, y: number, width: number, texture: Texture) {
         const platformGroup = this.platformGroup!;
         const platform = new Platform({ scene: this, x, y, texture }, width);
         platformGroup.add(platform);
