@@ -83,6 +83,174 @@
                 "w": 66,
                 "h": 66
             }
+        },
+        {
+            "filename": "snow_left",
+            "frame": {
+                "x": 461,
+                "y": 563,
+                "w": 66,
+                "h": 66
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 66,
+                "h": 66
+            },
+            "sourceSize": {
+                "w": 66,
+                "h": 66
+            }
+        },
+        {
+            "filename": "snow_right",
+            "frame": {
+                "x": 461,
+                "y": 497,
+                "w": 66,
+                "h": 66
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 66,
+                "h": 66
+            },
+            "sourceSize": {
+                "w": 66,
+                "h": 66
+            }
+        },
+        {
+            "filename": "snow",
+            "frame": {
+                "x": 461,
+                "y": 629,
+                "w": 66,
+                "h": 66
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 66,
+                "h": 66
+            },
+            "sourceSize": {
+                "w": 66,
+                "h": 66
+            }
+        },
+        {
+            "filename": "snow_body",
+            "frame": {
+                "x": 527,
+                "y": 65,
+                "w": 66,
+                "h": 66
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 66,
+                "h": 66
+            },
+            "sourceSize": {
+                "w": 66,
+                "h": 66
+            }
+        },
+        {
+            "filename": "sand_left",
+            "frame": {
+                "x": 725,
+                "y": 197,
+                "w": 66,
+                "h": 66
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 66,
+                "h": 66
+            },
+            "sourceSize": {
+                "w": 66,
+                "h": 66
+            }
+        },
+        {
+            "filename": "sand_right",
+            "frame": {
+                "x": 725,
+                "y": 131,
+                "w": 66,
+                "h": 66
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 66,
+                "h": 66
+            },
+            "sourceSize": {
+                "w": 66,
+                "h": 66
+            }
+        },
+        {
+            "filename": "sand",
+            "frame": {
+                "x": 725,
+                "y": 263,
+                "w": 66,
+                "h": 66
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 66,
+                "h": 66
+            },
+            "sourceSize": {
+                "w": 66,
+                "h": 66
+            }
+        },
+        {
+            "filename": "sand_body",
+            "frame": {
+                "x": 725,
+                "y": 593,
+                "w": 66,
+                "h": 66
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 66,
+                "h": 66
+            },
+            "sourceSize": {
+                "w": 66,
+                "h": 66
+            }
         }
     ]
 }
