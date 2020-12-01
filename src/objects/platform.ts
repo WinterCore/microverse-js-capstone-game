@@ -38,6 +38,8 @@ class Platform extends Phaser.GameObjects.Container {
         body.setOffset(width / 2, height / 2);
         body.setVelocityX(-100);
         scene.add.existing(this);
+
+        body.setFriction(0, 0);
     }
 
     constructSurface(): void {
