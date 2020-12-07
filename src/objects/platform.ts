@@ -1,6 +1,6 @@
 import * as Phaser from 'phaser';
 
-import { GameObjectArgs } from 'src/typings/index';
+import { GameObjectArgs } from '../typings/index';
 
 const PLATFORM_WIDTH            = 66;
 const CONNECTED_PLATFORM_WIDTH  = 64;
@@ -36,7 +36,6 @@ class Platform extends Phaser.GameObjects.Container {
         const body = this.body as Phaser.Physics.Arcade.Body;
         body.setImmovable(true);
         body.setOffset(width / 2, height / 2);
-        body.setVelocityX(-100);
         scene.add.existing(this);
 
         body.setFriction(0, 0);
