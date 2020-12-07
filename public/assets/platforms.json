@@ -251,6 +251,90 @@
                 "w": 66,
                 "h": 66
             }
+        },
+        {
+            "filename": "light_grass_left",
+            "frame": {
+                "x": 65,
+                "y": 597,
+                "w": 66,
+                "h": 66
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 66,
+                "h": 66
+            },
+            "sourceSize": {
+                "w": 66,
+                "h": 66
+            }
+        },
+        {
+            "filename": "light_grass_right",
+            "frame": {
+                "x": 65,
+                "y": 531,
+                "w": 66,
+                "h": 66
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 66,
+                "h": 66
+            },
+            "sourceSize": {
+                "w": 66,
+                "h": 66
+            }
+        },
+        {
+            "filename": "light_grass",
+            "frame": {
+                "x": 65,
+                "y": 663,
+                "w": 66,
+                "h": 66
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 66,
+                "h": 66
+            },
+            "sourceSize": {
+                "w": 66,
+                "h": 66
+            }
+        },
+        {
+            "filename": "light_grass_body",
+            "frame": {
+                "x": 131,
+                "y": 65,
+                "w": 66,
+                "h": 66
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 66,
+                "h": 66
+            },
+            "sourceSize": {
+                "w": 66,
+                "h": 66
+            }
         }
     ]
 }

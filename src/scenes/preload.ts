@@ -1,8 +1,11 @@
 import * as Phaser from 'phaser';
 
+import CONFIG from '../config';
+
 const PROGRESS_BAR_WIDTH = 320,
       PROGRESS_BAR_HEIGHT = 50,
       PROGRESS_BAR_PADDING = 5;
+
 
 class Preload extends Phaser.Scene {
     constructor() {
@@ -63,7 +66,16 @@ class Preload extends Phaser.Scene {
             frameHeight: 150,
         });
 
+        // Load coins
+        for (let coin of CONFIG.coins) {
+            this.load.spritesheet(`${coin.key}_coin`, `assets/${coin.key}_coin.png`, {
+                frameWidth: 50,
+                frameHeight: 50,
+            });
+        }
+
         this.load.atlas('platforms', 'assets/platforms.png', 'assets/platforms.json');
+
     }
 
     createAnims() {
@@ -76,6 +88,19 @@ class Preload extends Phaser.Scene {
             frameRate: 10,
             repeat: -1,
         });
+
+        // Create coin animations
+        for (let coin of CONFIG.coins) {
+            this.anims.create({
+                key: `${coin.key.toUpperCase()}_COIN_ROTATE`,
+                frames: this.anims.generateFrameNumbers(`${coin.key}_coin`, {
+                    start: 0,
+                    end: 10,
+                }),
+                frameRate: 10,
+                repeat: -1,
+            });
+        }
     }
 
     create() {
