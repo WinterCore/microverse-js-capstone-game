@@ -8,6 +8,8 @@ import {
     Options,
     Game,
     Gameover,
+    Credits,
+    Guide,
 } from './scenes/index';
 
 const config = {
@@ -21,6 +23,8 @@ const config = {
         Options,
         Game,
         Gameover,
+        Credits,
+        Guide,
     ],
     physics: {
         default: 'arcade',

@@ -6,7 +6,6 @@ const PROGRESS_BAR_WIDTH = 320,
       PROGRESS_BAR_HEIGHT = 50,
       PROGRESS_BAR_PADDING = 5;
 
-
 class Preload extends Phaser.Scene {
     constructor() {
         super('Preload');
@@ -33,8 +32,7 @@ class Preload extends Phaser.Scene {
         progressBox.fillStyle(0x222222, 0.8);
         progressBox.fillRect(width / 2 - PROGRESS_BAR_WIDTH / 2,
                              height / 2 - PROGRESS_BAR_HEIGHT / 2,
-                             PROGRESS_BAR_WIDTH,
-                             PROGRESS_BAR_HEIGHT);
+                             PROGRESS_BAR_WIDTH, PROGRESS_BAR_HEIGHT);
 
         this.load.on('progress', (val: number) => {
             progressBar.clear();
@@ -62,6 +60,22 @@ class Preload extends Phaser.Scene {
 
     loadAssets() {
         this.load.audio('coin_collect', ['assets/coin.wav']);
+        this.load.audio('bgmusic', ['assets/bgmusic.ogg']);
+
+        this.load.image('button_pink', 'assets/buttons/button_pink.png');
+        this.load.image('button_green', 'assets/buttons/button_green.png');
+        this.load.image('button_orange', 'assets/buttons/button_orange.png');
+        this.load.image('button_grey', 'assets/buttons/button_grey.png');
+
+        this.load.image('cross_button_orange', 'assets/buttons/cross_orange.png');
+        this.load.image('cross_button_green', 'assets/buttons/cross_green.png');
+        this.load.image('check_button_orange', 'assets/buttons/check_orange.png');
+        this.load.image('check_button_green', 'assets/buttons/check_green.png');
+
+        this.load.image('github', 'assets/github.png');
+
+        this.load.image('arrow_keys', 'assets/arrow_keys.png');
+
         this.load.spritesheet('character', 'assets/character.png', {
             frameWidth: 118,
             frameHeight: 150,
