@@ -1,5 +1,18 @@
 body {
-    min-height: 100%;
-    margin: 0;
-    overflow: hidden;
+  min-height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: junegull;
+  src: url('assets/junegull.ttf');
+  font-weight: 400;
+  font-weight: normal;
+}
+
+.fontLoader {
+  position: absolute;
+  left: -1000px;
+  visibility: hidden;
 }

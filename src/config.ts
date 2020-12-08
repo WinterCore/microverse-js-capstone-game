@@ -20,6 +20,13 @@ type Config = {
         jump_force : number;
         max_jump   : number;
     };
+    defaultFontStyle: {
+        color           : string;
+        fontSize        : string;
+        fontFamily      : string;
+        strokeThickness : number;
+        stroke          : string;
+};
 };
 
 
@@ -49,11 +56,14 @@ const config: Config = {
     passed_platform_points           : 5,
     textures                         : ['light_grass', 'grass', 'snow', 'sand'],
     player                           : {
-        gravity: 700,
-        move_speed: 200,
-        jump_force: 500,
-        max_jump: 2,
-    }
+
+    defaultFontStyle: {
+        color           : 'white',
+        fontSize        : '24px',
+        fontFamily      : 'junegull',
+        strokeThickness : 4,
+        stroke          : 'black'
+    },
 };
 
 
