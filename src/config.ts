@@ -26,7 +26,7 @@ type Config = {
         fontFamily      : string;
         strokeThickness : number;
         stroke          : string;
-};
+    };
 };
 
 
@@ -34,28 +34,33 @@ const config: Config = {
     coins: [
         // NOTE: The rates need to amount to 1 in total and need to be in DESCENDING order
         {
-            points     : 5,
+            points     : 10,
             spawn_rate : 0.5,
             key        : 'bronze',
         },
         {
-            points     : 10,
-            spawn_rate : 0.35,
+            points     : 20,
+            spawn_rate : 0.3,
             key        : 'silver',
         },
         {
-            points     : 25,
-            spawn_rate : 0.15,
+            points     : 35,
+            spawn_rate : 0.2,
             key        : 'gold',
         },
     ],
     coin_spawn_rate                  : 0.7,
     initial_scroll_speed             : 150,
     scroll_speed_increase_per_points : 50,
-    scroll_speed_increase_rate       : 15,
+    scroll_speed_increase_rate       : 20,
     passed_platform_points           : 5,
     textures                         : ['light_grass', 'grass', 'snow', 'sand'],
     player                           : {
+        gravity    : 800,
+        move_speed : 200,
+        jump_force : 600,
+        max_jump   : 2,
+    },
 
     defaultFontStyle: {
         color           : 'white',
