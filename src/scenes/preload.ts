@@ -61,10 +61,14 @@ class Preload extends Phaser.Scene {
     }
 
     loadAssets() {
+        this.load.audio('coin_collect', ['assets/coin.wav']);
         this.load.spritesheet('character', 'assets/character.png', {
             frameWidth: 118,
             frameHeight: 150,
         });
+
+        this.load.image('background', 'assets/background.png');
+        this.load.image('clouds', 'assets/clouds.png');
 
         // Load coins
         for (let coin of CONFIG.coins) {
