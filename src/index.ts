@@ -12,7 +12,7 @@ import {
     Guide,
 } from './scenes/index';
 
-const config = {
+const config: Phaser.Types.Core.GameConfig = {
     width: window.innerWidth,
     height: window.innerHeight,
     scene: [
@@ -26,12 +26,16 @@ const config = {
         Credits,
         Guide,
     ],
+    dom: {
+        createContainer: true,
+    },
     physics: {
         default: 'arcade',
         arcade: {
             debug: true,
         },
     },
+    parent: document.body,
 };
 
 new Phaser.Game(config);

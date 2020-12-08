@@ -61,7 +61,7 @@ class Title extends Phaser.Scene {
             }
         });
 
-        new Button(this, halfWidth, halfHeight + 250, {
+        new Button(this, halfWidth - 100, halfHeight + 250, {
             inactiveTexture: 'button_grey',
             activeTexture: 'button_green',
             content: 'Credits',
@@ -69,6 +69,16 @@ class Title extends Phaser.Scene {
                 this.scene.start('Credits');
             }
         });
+
+        new Button(this, halfWidth + 100, halfHeight + 250, {
+            inactiveTexture: 'button_grey',
+            activeTexture: 'button_green',
+            content: 'Leaderboard',
+            onClick: () => {
+                this.scene.start('Leaderboard');
+            }
+        });
+
 
     }
 }

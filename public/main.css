@@ -16,3 +16,16 @@ body {
   left: -1000px;
   visibility: hidden;
 }
+
+input {
+  font-family: junegull, sans-serif;
+  width: 300px;
+  font-size: 18px;
+  padding: 15px 10px;
+}
+
+.leaderboard td, .leaderboard th {
+  padding: 3px 20px;
+  text-align: left;
+  font-size: 20px;
+}
