@@ -24,7 +24,7 @@ class Button extends Phaser.GameObjects.Container {
 
         if (content) {
             const text = new Phaser.GameObjects.Text(scene, 0, 0, content.toUpperCase(), {
-                color: 'white', fontSize: '24px', fontFamily: 'junegull', strokeThickness: 4, stroke: 'black'
+                color: 'white', fontSize: '22px', fontFamily: 'junegull', strokeThickness: 4, stroke: 'black'
             });
             this.add(text);
             Phaser.Display.Align.In.Center(text, button);
