@@ -30,10 +30,18 @@ class Game extends Phaser.Scene {
     }
 
     create(): void {
+        this.score           = 0;
+        this.currentTexture  = CONFIG.textures[0];
+        this.stage           = 0;
+        this.nextStagePoints = CONFIG.scroll_speed_increase_per_points;
+        this.platformsPassed = 0;
+        this.upkeyDown       = false;
+
         const gameWidth  = +this.game.config.width;
         const gameHeight = +this.game.config.height;
 
         this.player = new Player({ scene: this, x: +gameWidth / 2, y: 50, texture: 'character' });
+
         this.registry.set('score', this.score);
 
         this.platformGroup = this.add.group();

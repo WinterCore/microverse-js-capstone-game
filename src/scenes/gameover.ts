@@ -18,6 +18,8 @@ class Gameover extends Phaser.Scene {
     }
 
     create() {
+        this.submitting = false;
+
         const { width, height } = this.cameras.main;
         const halfWidth = width / 2, halfHeight = height / 2;
 
