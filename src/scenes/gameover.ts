@@ -69,7 +69,7 @@ class Gameover extends Phaser.Scene {
     private async submitScore() {
         const nameInputNode = this.nameInput!.node as HTMLInputElement;
 
-        if (this.submitting) return;
+        if (this.submitting || nameInputNode.value.length === 0) return;
         this.submitting = true;
         nameInputNode.disabled = true;
         this.infoH3!.setContent('Submitting score...', 'black');
