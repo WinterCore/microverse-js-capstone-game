@@ -1,7 +1,7 @@
 
 class State {
     soundOn: boolean = false;
-    musicOn: boolean = false;
+    musicOn: boolean = true;
     data: any = {};
 
     private static _instance: State;
