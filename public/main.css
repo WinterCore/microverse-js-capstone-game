@@ -24,7 +24,8 @@ input {
   padding: 15px 10px;
 }
 
-.leaderboard td, .leaderboard th {
+.leaderboard td,
+.leaderboard th {
   padding: 3px 20px;
   text-align: left;
   font-size: 20px;
