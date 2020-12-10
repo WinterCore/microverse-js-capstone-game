@@ -1,6 +1,6 @@
 
 class State {
-    soundOn: boolean = false;
+    soundOn: boolean = true;
     musicOn: boolean = true;
     data: any = {};
 
