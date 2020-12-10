@@ -7,7 +7,8 @@
     "build": "webpack --color --progress",
     "start": "webpack serve",
     "lint": "eslint .",
-    "lint:css": "stylelint **/*.{css,scss}"
+    "lint:css": "stylelint **/*.{css,scss}",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -20,12 +21,20 @@
   },
   "homepage": "https://github.com/WinterCore/microverse-js-capstone-game#readme",
   "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-transform-runtime": "^7.12.10",
+    "@babel/preset-env": "^7.12.10",
+    "@babel/preset-typescript": "^7.12.7",
+    "@types/jest": "^26.0.18",
+    "@types/node": "^14.14.12",
     "babel-eslint": "^10.1.0",
     "copy-webpack-plugin": "^6.3.0",
     "eslint": "^7.13.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
     "html-webpack-plugin": "^4.5.0",
+    "jest": "^26.6.3",
+    "jest-canvas-mock": "^2.3.0",
     "stylelint": "^13.7.2",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-csstree-validator": "^1.9.0",

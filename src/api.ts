@@ -1,6 +1,6 @@
 const GAME_ID = 'tf6XB9aHY5hoYEbi45Ym';
 
-const ENDPOINT = `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${GAME_ID}/scores`;
+export const ENDPOINT = `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${GAME_ID}/scores`;
 
 export type Score = {
     user: string;

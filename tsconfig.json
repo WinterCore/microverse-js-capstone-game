@@ -16,14 +16,18 @@
             "es2016",
             "dom"
         ],
+        "types": [
+            "@types/jest",
+            "@types/node"
+        ],
         "baseUrl": ".",
         "typeRoots": [
-            "./node_modules/phaser/types"
+            "./node_modules/phaser/types",
         ]
     },
     "include": [
         "src/**/*",
         "node_modules/phaser/types/**/*"
     ],
-    
+
 }
