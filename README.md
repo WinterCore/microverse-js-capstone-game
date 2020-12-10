@@ -27,7 +27,7 @@ A javascript platformer game made with [Phaser3](https://phaser.io/phaser3)
 
 ## Game Concept
 
-Scuffed cat is a platformer. In this game scuffed cat can jump over platforms and collect coins to achieve higher scores.
+Scuffed cat is a platformer. In this game scuffed cat can jump over platforms and collect coins to achieve high scores.
 
 ## Basic Gameplay
 
@@ -96,7 +96,7 @@ Try to score as many points as possible without dying.
 ![](demo/gameplay.png)
 
 ### Gameover
-> The player is taken to this scene after dying so they can submit their score if they wanted.
+> The player is taken to this scene after dying so they can submit their score if they want to.
 
 ![](demo/gameover.png)
 
