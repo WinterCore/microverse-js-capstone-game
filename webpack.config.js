@@ -19,12 +19,12 @@ module.exports = {
   },
   devServer: {
     port: 8080,
-    contentBase: 'dist',
+    contentBase: 'build',
     open: true,
   },
   output: {
     filename: '[fullhash]_bundle.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'build'),
   },
   plugins: [
     new HtmlWebpackPlugin({
