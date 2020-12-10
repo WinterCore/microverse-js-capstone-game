@@ -8,6 +8,7 @@ A javascript platformer game made with [Phaser3](https://phaser.io/phaser3)
   - [Game Concept](#game-concept)
   - [Basic Gameplay](#basic-gameplay)
   - [How to Play](#how-to-play)
+  - [Live Demo](#live-demo)
   - [Assets](#assets)
     - [Scuffed Cat (The main character)](#scuffed-cat-the-main-character)
     - [Coins](#coins)
@@ -43,6 +44,7 @@ Use the left & right arrow keys to move left & right, and use the up arrow key t
 The player is allowed to jump twice.
 Try to score as many points as possible without dying.
 
+## [Live Demo](https://obscure-refuge-92796.herokuapp.com/)
 ## Assets
 
 ### Scuffed Cat (The main character)
