@@ -74,15 +74,15 @@ class Gameover extends Phaser.Scene {
         nameInputNode.disabled = true;
         this.infoH3!.setContent('Submitting score...', 'black');
 
-        try {
-            await saveScore({
-                score: this.registry.get('score'),
-                user: nameInputNode.value,
-            });
+        const { success } = await saveScore({
+            score: this.registry.get('score'),
+            user: nameInputNode.value,
+        });
 
+        if (success) {
             this.infoH3!.setContent('Score saved successfully', 'black');
             setTimeout(() => this.scene.start('Title'), 2000);
-        } catch (e) {
+        } else {
             this.infoH3!.setContent('Something happened!', 'red');
             nameInputNode.disabled = false;
             this.submitting = false;

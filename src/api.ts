@@ -7,23 +7,37 @@ export type Score = {
     score: number;
 };
 
-export const saveScore = async (score: Score) => {
-    const response = await fetch(ENDPOINT, {
-        method  : 'POST',
-        body    : JSON.stringify(score),
-        headers : {
-          'Accept'       : 'application/json',
-          'Content-Type' : 'application/json'
-        },
-    });
-    if (!response.ok) {
-        throw new Error('something happened');
-    }
-    return response.json();
+type CustomResponse<T> = {
+    success: boolean;
+    result: T;
 };
 
-export const fetchScores = async (): Promise<{ result: Score[] }> => {
-    const result = await fetch(ENDPOINT, { headers: { 'Accept' : 'application/json' } });
+export const saveScore = async (score: Score): Promise<Omit<CustomResponse<unknown>, 'result'>> => {
+    try {
+        const response = await fetch(ENDPOINT, {
+            method  : 'POST',
+            body    : JSON.stringify(score),
+            headers : {
+            'Accept'       : 'application/json',
+            'Content-Type' : 'application/json'
+            },
+        });
+        return { success: true };
+    } catch (e) {
+        return { success: false };
+    }
+};
 
-    return result.json();
+export const fetchScores = async (): Promise<CustomResponse<{ result: Score[] } | null>> => {
+    try {
+
+        const response = await fetch(ENDPOINT, { headers: { 'Accept' : 'application/json' } });
+
+        return {
+            success: true,
+            result: await response.json()
+        };
+    } catch (e) {
+        return { success: false, result: null };
+    }
 };

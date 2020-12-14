@@ -44,13 +44,13 @@ class Leaderboard extends Phaser.Scene {
     }
 
     private async loadScores(): Promise<void> {
-        try {
-            const { result } = await fetchScores();
-            result.sort((a, b) => b.score - a.score);
-
-            this.renderScoresTable(result);
+        const { success, result } = await fetchScores();
+        if (success && result) {
+            const scores = result.result;
+            scores.sort((a, b) => b.score - a.score);
+            this.renderScoresTable(scores);
             this.infoH3!.destroy();
-        } catch (e) {
+        } else {
             this.infoH3!.setContent('Something happened. Please try again later', 'red');
         }
     }
